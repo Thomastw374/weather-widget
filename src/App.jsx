@@ -1,37 +1,54 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { apiKey } from "./data/enviromentVariables";
 import Home from "./pages/Home";
 
 function App() {
-  const [status, setStatus] = useState();
-  const [long, setLong] = useState();
-  const [lat, setLat] = useState();
+  const [weather, setWeather] = useState()
 
-  const getLocation = () => {
-    if (!navigator.geolocation) {
-      setStatus("Geolocation is not supported by your browser");
+  const getPositionPromise = function (options) {
+    return new Promise(function (resolve, reject) {
+      navigator.geolocation.getCurrentPosition(resolve,reject)
+    });
+  }
+
+  // Do I even need the promise here now?
+  
+  const getPosition = () => {
+    if (navigator.geolocation) {
+      getPositionPromise()
+        .then((position) => {
+          getWeather(position.coords.latitude, position.coords.longitude);
+        })
+        .catch((err) => {
+          getWeather(28.67, 77.22);
+          alert("You have disabled location service");
+        });
     } else {
-      setStatus("Locating...");
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setStatus(null);
-          setLat(position.coords.latitude);
-          setLong(position.coords.longitude);
-        },
-        () => {
-          setStatus("Unable to retrieve your location");
-        }
-      );
+      alert("Geolocation not available");
     }
-  };
+  }
+
+  
+
+  const getWeather = async (lat, long) => {
+
+    let weatherData = [];
+    const url =
+      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
+    const response = await fetch(url)
+    weatherData = (await response.json());
+    console.log(weatherData)
+    setWeather(weatherData)
+  }
 
   useEffect(() => {
-    getLocation()
-  }, [])
+    getPosition();
+  }, []);
 
   return (
     <div className="App">
-      <Home getLocation={() => getLocation()} />
+      <Home />
     </div>
   );
 }

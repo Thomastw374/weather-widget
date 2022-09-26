@@ -1,8 +1,8 @@
 
-const Home = ({getLocation}) => {
+const Home = ({getWeather}) => {
     return (
       <>
-        <button onClick={() => getLocation()}>Get Location</button>
+        
       </>
     );
 }
