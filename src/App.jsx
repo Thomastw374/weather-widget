@@ -8,7 +8,7 @@ function App() {
 
   const getPositionPromise = function (options) {
     return new Promise(function (resolve, reject) {
-      navigator.geolocation.getCurrentPosition(resolve,reject)
+      navigator.geolocation.getCurrentPosition(resolve, reject)
     });
   }
 
@@ -29,8 +29,6 @@ function App() {
     }
   }
 
-  
-
   const getWeather = async (lat, long) => {
 
     let weatherData = [];
@@ -48,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      <Home weather={weather} />
     </div>
   );
 }
