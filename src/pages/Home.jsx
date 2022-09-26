@@ -1,12 +1,16 @@
 import Nav from "../components/Nav/Nav";
+import WeatherContainerCard from "../components/WeatherContainerCard/WeatherContainerCard";
 
 const Home = ({weather}) => {
     return (
-      <main className="home-page">
-        <header>
+      <>
+        <header className="home__header">
           <Nav weather={weather} />
         </header>
-      </main>
+        <main className="home__main">
+          <WeatherContainerCard weather={weather}/>
+        </main>
+      </>
     );
 }
 

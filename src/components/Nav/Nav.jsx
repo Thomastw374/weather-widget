@@ -27,8 +27,11 @@ const Nav = ({ weather }) => {
 
   return (
     <div className="nav">
-      <img src={imgPath} alt="" className="nav__greeting-image" />
-      <h1 className="nav__greeting">{greeting}</h1>
+      <div className="nav__main">
+          <img src={imgPath} alt="" className="nav__greeting-image" />
+          <h1 className="nav__greeting">{greeting}</h1>
+      </div>
+      <div className="nav__line"></div>
     </div>
   );
 };
