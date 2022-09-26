@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./WeatherContainerCard.scss"
 
 
 const WeatherContainerCard = ({weather}) => {
