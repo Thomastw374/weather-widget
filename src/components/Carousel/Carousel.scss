@@ -1,0 +1,30 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  margin: 1rem;
+
+  .carousel__body {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel__arrow {
+    margin: 1rem;
+  }
+
+  .carousel__image {
+    width: 20rem;
+  }
+
+  .carousel__header {
+    width: 30rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

@@ -81,18 +81,18 @@ function App() {
     setWeather(weatherData)
   }
 
-  const getNews = async() => {
-    let newsData = {};
-    const url =
-      "https://api.thenewsapi.com/v1/news/top?api_token=FH3JXbwC6JJHnC8aFJFCFMuhKOdmor2vnWaSgVg1&language=en";
-    const response = await fetch(url)
-    newsData = await response.json()
-    console.log(newsData)
-  }
+  // const getNews = async() => {
+  //   let newsData = {};
+  //   const url =
+  //     "https://api.thenewsapi.com/v1/news/top?api_token=FH3JXbwC6JJHnC8aFJFCFMuhKOdmor2vnWaSgVg1&language=en";
+  //   const response = await fetch(url)
+  //   newsData = await response.json()
+  //   console.log(newsData)
+  // }
 
   useEffect(() => {
     getPosition();
-    getNews();
+    // getNews();
   }, []);
 
   return (

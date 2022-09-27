@@ -25,4 +25,7 @@ const WeatherContainerCard = ({weather}) => {
     );
 }
 
+// A container should contain at least one component
+
+
 export default WeatherContainerCard;

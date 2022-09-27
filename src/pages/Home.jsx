@@ -1,5 +1,6 @@
 import Nav from "../components/Nav/Nav";
 import WeatherContainerCard from "../components/WeatherContainerCard/WeatherContainerCard";
+import NewsGallery from "../containers/NewsGallery/NewsGallery";
 import "./Home.scss"
 
 const Home = ({weather}) => {
@@ -11,6 +12,8 @@ const Home = ({weather}) => {
         <main className="home__main">
           <h2>The Weather</h2>
           <WeatherContainerCard weather={weather} />
+          <h2>Top News Today</h2>
+          <NewsGallery />
         </main>
       </div>
     );
