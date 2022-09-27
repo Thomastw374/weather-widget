@@ -5,7 +5,7 @@
 
   .nav__main {
     display: flex;
-    width: 100%;
+    width: 90vw;
     justify-content: start;
     align-items: center;
   }
@@ -13,13 +13,14 @@
   .nav__greeting-image {
     height: 6rem;
     width: auto;
-    margin: 1rem;
+    margin-block: 1rem;
+    margin-right: 0.5rem;
   }
 
   .nav__line {
     background-color: black;
-    height: 0.1rem;
-    width: 90vw;
+    height: 0.12rem;
+    width: 80vw;
     margin-block: 1rem;
   }
 }

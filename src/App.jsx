@@ -63,6 +63,7 @@ function App() {
         .catch((err) => {
           getWeather(28.67, 77.22);
           alert("You have disabled location service");
+          // this alert happens when not connected to internet also
         });
     } else {
       alert("Geolocation not available");
@@ -71,7 +72,7 @@ function App() {
 
   const getWeather = async (lat, long) => {
 
-    let weatherData = [];
+    let weatherData = {};
     const url =
       `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
     const response = await fetch(url)
@@ -80,8 +81,18 @@ function App() {
     setWeather(weatherData)
   }
 
+  const getNews = async() => {
+    let newsData = {};
+    const url =
+      "https://api.thenewsapi.com/v1/news/top?api_token=FH3JXbwC6JJHnC8aFJFCFMuhKOdmor2vnWaSgVg1&language=en";
+    const response = await fetch(url)
+    newsData = await response.json()
+    console.log(newsData)
+  }
+
   useEffect(() => {
     getPosition();
+    getNews();
   }, []);
 
   return (

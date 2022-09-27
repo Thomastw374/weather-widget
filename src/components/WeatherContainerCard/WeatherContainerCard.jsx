@@ -12,7 +12,7 @@ const WeatherContainerCard = ({weather}) => {
       <div className="weather-card">
         <div className="weather-card__topline">
           <h3 className="weather-card__topline-text">
-            {weather ? location.region : "Loading..."}, 
+            {weather ? location.region : "Loading..."},{" "} 
             {weather ? location.country : null}
           </h3>
             <div className="weather-card__condition">
