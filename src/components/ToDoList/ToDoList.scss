@@ -1,0 +1,21 @@
+.todo-list{
+    display: flex;
+    height: 10rem;
+    flex-direction: column;
+    align-items: center;
+
+    .todo-list__add-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height:2rem;
+        width: 16rem;
+        margin: 1rem;
+    }
+
+    .todo-list__line{
+        height: 0.2rem;
+        background-color: black;
+        width: 60vw;
+    }
+}

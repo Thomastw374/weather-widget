@@ -1,7 +1,9 @@
 import Nav from "../components/Nav/Nav";
-import WeatherContainerCard from "../components/WeatherContainerCard/WeatherContainerCard";
-import NewsGallery from "../containers/NewsGallery/NewsGallery";
+import Weather from "../components/Weather/Weather";
+import Card from "../containers/Card/Card";
 import "./Home.scss"
+import Carousel from "../components/Carousel/Carousel";
+import ToDoList from "../components/ToDoList/ToDoList";
 
 const Home = ({weather}) => {
     return (
@@ -11,9 +13,11 @@ const Home = ({weather}) => {
         </header>
         <main className="home__main">
           <h2>The Weather</h2>
-          <WeatherContainerCard weather={weather} />
+          <Card content={<Weather weather={weather}/>} />
           <h2>Top News Today</h2>
-          <NewsGallery />
+          <Card content={<Carousel/>} />
+          <h2>Your To Do List</h2>
+          <Card content={<ToDoList />}/>
         </main>
       </div>
     );

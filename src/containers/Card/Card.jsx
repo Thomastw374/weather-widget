@@ -1,16 +1,16 @@
 import Carousel from "../../components/Carousel/Carousel";
-import "./NewsGallery.scss"
+import "./Card.scss"
 
 
 
-const NewsGallery = () => {
+const Card = ({content}) => {
     
 
     return (
       <div className="news-card">
-        <Carousel />
+        {content}
       </div>
     );
 }
 
-export default NewsGallery;
+export default Card;

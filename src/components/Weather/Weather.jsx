@@ -1,13 +1,13 @@
 import { useState } from "react";
-import "./WeatherContainerCard.scss"
+import "./Weather.scss"
 
 
-const WeatherContainerCard = ({weather}) => {
+const Weather = ({weather}) => {
     const {isCelsius, setIsCelsius} = useState(true)
     
     const location = weather.location;
     const current = weather.current;
-
+// may be able to remove some this ternary logic now. weather is now initialized as an empty object, I think that was the issue.
     return (
       <div className="weather-card">
         <div className="weather-card__topline">
@@ -28,4 +28,4 @@ const WeatherContainerCard = ({weather}) => {
 // A container should contain at least one component
 
 
-export default WeatherContainerCard;
+export default Weather;

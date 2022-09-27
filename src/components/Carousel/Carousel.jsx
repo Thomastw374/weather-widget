@@ -41,7 +41,7 @@ const Carousel = () => {
           src={newsData[counter].image_url}
           alt="News Story"
         />
-        <p className="carousel__text">{newsData[counter].description}</p>
+        <p className="carousel__text">{newsData[counter].snippet}</p>
       </div>
       <img
         className="carousel__arrow"

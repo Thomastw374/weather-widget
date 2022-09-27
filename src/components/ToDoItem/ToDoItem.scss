@@ -1,0 +1,7 @@
+.todo{
+    .todo__task-text{
+        &--strikethrough{
+            text-decoration: line-through;
+        }
+    }
+}

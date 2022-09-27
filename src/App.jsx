@@ -73,12 +73,19 @@ function App() {
   const getWeather = async (lat, long) => {
 
     let weatherData = {};
-    const url =
+    const currentUrl =
       `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
-    const response = await fetch(url)
-    weatherData = (await response.json());
-    console.log(weatherData)
+    const currentResponse = await fetch(currentUrl)
+    weatherData = (await currentResponse.json());
     setWeather(weatherData)
+
+    let forecastData = {}
+
+    const forecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${long}&days=8`;
+
+    const forecastResponse = await fetch(forecastUrl)
+    forecastData = await forecastResponse.json()
+    console.log(forecastData)
   }
 
   // const getNews = async() => {
