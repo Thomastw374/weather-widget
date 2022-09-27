@@ -1,7 +1,16 @@
 .todo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 16rem;
     .todo__task-text{
+        margin-inline: 1rem;
         &--strikethrough{
             text-decoration: line-through;
         }
+    }
+
+    .todo__remove-button{
+        height: 1.5rem;
     }
 }

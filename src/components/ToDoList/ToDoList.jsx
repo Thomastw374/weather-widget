@@ -33,20 +33,26 @@ const ToDoList = () => {
         );
     })
 
-    return(
-        <div className="todo-list">
-            <div className="todo-list__add-item">
-                <p>Task: </p>
-                <input type="text" onChange={handleInput} />
-                <button onClick={addToDo}>+</button>
-                <button onClick={resetToDos}>Reset ToDos</button>
-            </div>
-            <div className="todo-list__line"></div>
-            <div className="todo-list__items">
-                {toDoListArr}
-            </div>
+    return (
+      <div className="todo-list">
+        <div className="todo-list__inputs">
+          <div className="todo-list__text-input">
+            <p>Task: </p>
+            <input className="todo-list__input" type="text" onChange={handleInput} />
+          </div>
+          <div className="todo-list__buttons">
+            <button className="todo-list__button" onClick={addToDo}>
+              +
+            </button>
+            <button className="todo-list__button" onClick={resetToDos}>
+              Reset
+            </button>
+          </div>
         </div>
-    )
+        <div className="todo-list__line"></div>
+        <div className="todo-list__items">{toDoListArr}</div>
+      </div>
+    );
 }
 
 export default ToDoList;

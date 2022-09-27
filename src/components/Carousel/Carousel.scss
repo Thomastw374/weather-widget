@@ -1,11 +1,11 @@
 .carousel {
   display: flex;
   align-items: center;
-  width: 90vw;
+  justify-content: center;
+  width: 100%;
   margin: 1rem;
 
   .carousel__body {
-    width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,10 +21,9 @@
 
   .carousel__header {
     width: 30rem;
-    height: 8rem;
+    height: 6rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
   }
 }

@@ -73,12 +73,13 @@ function App() {
   const getWeather = async (lat, long) => {
 
     let weatherData = {};
+
     const currentUrl =
       `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
     const currentResponse = await fetch(currentUrl)
     weatherData = (await currentResponse.json());
     setWeather(weatherData)
-
+    
     let forecastData = {}
 
     const forecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${long}&days=8`;
