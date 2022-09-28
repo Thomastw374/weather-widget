@@ -1,4 +1,5 @@
 import DailyForecast from "../../components/DailyForecast/DailyForecast";
+import "./WeekForecast.scss"
 
 const WeekForecast = ({forecast}) => {
 

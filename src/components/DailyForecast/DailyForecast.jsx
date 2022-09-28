@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./DailyForecast.scss"
 
 const DailyForecast = ({dailyForecast}) => {
     const[isCelsius, setIsCelsius] = useState(false)

@@ -12,14 +12,22 @@ const Weather = ({weather}) => {
       <div className="weather-card">
         <div className="weather-card__topline">
           <h3 className="weather-card__topline-text">
-            {weather ? location.region : "Loading..."},{" "} 
-            {weather ? location.country : null}
+            {location.region}, {weather ? location.country : ""}
           </h3>
-            <div className="weather-card__condition">
-            <img src={weather ? current.condition.icon : null} alt="" />
-            <p>{!isCelsius ? current.temp_c + " C" : current.temp_f + " F" }</p>
-            <p>{weather ? current.condition.text : null}</p>
-            </div>
+          <div className="weather-card__condition">
+            <img src={weather ? current.condition.icon : ""} alt="" />
+            <p>{!isCelsius ? current.temp_c + " C" : current.temp_f + " F"}</p>
+            <p>{weather ? current.condition.text : ""}</p>
+          </div>
+        </div>
+        <div>
+          <p>{`Humidity: ` + (weather ? current.humidity : "") + `%`}</p>
+          <p>
+            {`Avg. Wind Speed: ` + (weather ? current.wind_mph : "") + ` mph`}
+          </p>
+          <p>
+            {`Feels Like: ` + (weather ? current.feelslike_c : "") + ` C`}
+          </p>
         </div>
       </div>
     );

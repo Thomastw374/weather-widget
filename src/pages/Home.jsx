@@ -16,7 +16,8 @@ const Home = ({weather, newsData, forecast}) => {
         <main className="home__main">
           <h2 className="home__subheader">The Weather Today</h2>
           <Card content={<Weather weather={weather} />} />
-          <Card content={<WeekForecast forecast={forecast}/> }/>
+          <h2 className="home__subheader">Weekly Forecast</h2>
+          <Card content={<WeekForecast forecast={forecast} />} />
           <h2 className="home__subheader">Top News Today</h2>
           <Card content={<Carousel newsData={newsData} />} />
           <h2 className="home__subheader">Your To Do List</h2>

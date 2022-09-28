@@ -25,7 +25,7 @@ const Carousel = ({newsData}) => {
   return (
     <div className="carousel">
       <img
-        className="carousel__arrow"
+        className="carousel__arrow-left"
         src={LeftArrow}
         alt="left arrow"
         onClick={handleIncrement}
@@ -33,23 +33,23 @@ const Carousel = ({newsData}) => {
       <div className="carousel__body">
         <div className="carousel__header">
           <h3 className="carousel__title">
-            {newsData.data[counter].title}
+            {newsData ? newsData.data[counter].title : ""}
           </h3>
           <p className="carousel__text">
-            {newsData.data[counter].source}
+            {newsData ? newsData.data[counter].source : ""}
           </p>
         </div>
         <img
           className="carousel__image"
-          src={newsData.data[counter].image_url}
+          src={ newsData ? newsData.data[counter].image_url : ""}
           alt="News Story"
         />
         <p className="carousel__text">
-          {newsData.data[counter].snippet}
+          { newsData ? newsData.data[counter].snippet : ""}
         </p>
       </div>
       <img
-        className="carousel__arrow"
+        className="carousel__arrow-right"
         src={RightArrow}
         alt="right arrow"
         onClick={handleDecrement}
