@@ -8,7 +8,6 @@ const ToDoList = () => {
 
     const addToDo = () => {
         setToDoList(oldArray => [...oldArray, toDo])
-        console.log(toDoList)
     }
 
     const removeCard = (index) => {

@@ -17,7 +17,7 @@ const Weather = ({weather}) => {
           </h3>
             <div className="weather-card__condition">
             <img src={weather ? current.condition.icon : null} alt="" />
-            <p>{isCelsius ? current.temp_c + " C" : current.temp_f + " F" }</p>
+            <p>{!isCelsius ? current.temp_c + " C" : current.temp_f + " F" }</p>
             <p>{weather ? current.condition.text : null}</p>
             </div>
         </div>

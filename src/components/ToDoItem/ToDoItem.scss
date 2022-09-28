@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 16rem;
+    margin: 0.2rem;
     .todo__task-text{
         margin-inline: 1rem;
         &--strikethrough{
@@ -11,6 +12,7 @@
     }
 
     .todo__remove-button{
-        height: 1.5rem;
+        height: 1.1rem;
+        width: 1.1rem;
     }
 }

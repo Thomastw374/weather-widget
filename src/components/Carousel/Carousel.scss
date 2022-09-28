@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 30rem;
   margin: 1rem;
 
   .carousel__body {
@@ -12,16 +13,25 @@
   }
 
   .carousel__arrow {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .carousel__text {
     margin: 1rem;
   }
 
   .carousel__image {
-    width: 20rem;
+    margin: 1rem;
+    width: auto;
+    height: 6rem;
   }
 
   .carousel__header {
-    width: 30rem;
-    height: 6rem;
+    margin: 1rem;
+    width: 13rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;

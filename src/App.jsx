@@ -1,6 +1,9 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import { apiKey } from "./data/environmentVariables";
+import "./styles/main.scss";
+import mockNewsData from "./data/mockNews";
+import mockForecast from "./data/mockForecast";
 import Home from "./pages/Home";
 
 function App() {
@@ -46,6 +49,10 @@ function App() {
     },
   });
 
+  const [newsData, setNewsData] = useState(mockNewsData)
+
+  const [forecast, setForecast] = useState(mockForecast)
+
   const getPositionPromise = function (options) {
     return new Promise(function (resolve, reject) {
       navigator.geolocation.getCurrentPosition(resolve, reject)
@@ -79,33 +86,33 @@ function App() {
     const currentResponse = await fetch(currentUrl)
     weatherData = (await currentResponse.json());
     setWeather(weatherData)
-    
+
     let forecastData = {}
 
     const forecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${long}&days=8`;
 
     const forecastResponse = await fetch(forecastUrl)
     forecastData = await forecastResponse.json()
-    console.log(forecastData)
+    setForecast(forecastData)
   }
 
-  // const getNews = async() => {
-  //   let newsData = {};
-  //   const url =
-  //     "https://api.thenewsapi.com/v1/news/top?api_token=FH3JXbwC6JJHnC8aFJFCFMuhKOdmor2vnWaSgVg1&language=en";
-  //   const response = await fetch(url)
-  //   newsData = await response.json()
-  //   console.log(newsData)
-  // }
+  const getNews = async() => {
+    let newsData = {};
+    const url =
+      "https://api.thenewsapi.com/v1/news/top?api_token=FH3JXbwC6JJHnC8aFJFCFMuhKOdmor2vnWaSgVg1&language=en";
+    const response = await fetch(url)
+    newsData = await response.json()
+    setNewsData(newsData)
+  }
 
   useEffect(() => {
     getPosition();
-    // getNews();
+    getNews();
   }, []);
 
   return (
     <div className="App">
-      <Home weather={weather} />
+      <Home weather={weather} newsData = {newsData} forecast = {forecast}/>
     </div>
   );
 }
