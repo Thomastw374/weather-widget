@@ -1,52 +1,60 @@
-.todo-list{
+.todo-list {
+  display: flex;
+  height: auto;
+  width: 50vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+
+  .todo-list__inputs {
     display: flex;
-    height: auto;
-    width: 50vw;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    overflow: visible;
+    height: 2rem;
+    margin: 1rem;
+  }
 
-    .todo-list__inputs{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 2rem;
-        margin: 1rem;
-    }
+  .todo-list__items {
+    min-height: 14rem;
+  }
 
-    .todo-list__items{
-        min-height: 14rem;
-    }
+  .todo-list__text-input {
+    display: flex;
+    align-items: center;
+  }
 
-    .todo-list__text-input{
-        display: flex;
-        align-items: center;
-    }
+  .todo-list__input {
+    margin: 0.2rem;
+    width: 8rem;
+  }
 
-    .todo-list__input{
-        margin: 0.2rem;
-        width: 8rem;
-    }
+  .todo-list__buttons {
+    display: flex;
+    align-items: center;
+  }
 
-    .todo-list__buttons{
-        display: flex;
-        align-items: center;
+  .todo-list__button {
+    margin: 0.1rem;
+    border: black 2px solid;
+    padding: 0.1rem;
+    padding-inline: 0.2rem;
+    background-color: white;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    .todo-list__button{
-        margin: 0.1rem;
-    }
-
-    .todo-list__line{
-        height: 0.2rem;
-        background-color: black;
-        width: 60vw;
-    }
+  .todo-list__line {
+    height: 0.2rem;
+    background-color: black;
+    width: 60vw;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .todo-list{
+  .todo-list {
     display: flex;
     height: auto;
     width: 70vw;
@@ -55,41 +63,41 @@
     align-items: center;
     overflow: visible;
 
-    .todo-list__inputs{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 2rem;
-        margin: 2rem;
+    .todo-list__inputs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 2rem;
+      margin: 2rem;
     }
 
-    .todo-list__text-input{
-        display: flex;
-        align-items: center;
-        margin-right: 5rem;
+    .todo-list__text-input {
+      display: flex;
+      align-items: center;
+      margin-right: 5rem;
     }
 
-    .todo-list__input{
-        margin: 0.5rem;
-        width: 14rem;
+    .todo-list__input {
+      margin: 0.5rem;
+      width: 14rem;
     }
 
-    .todo-list__buttons{
-        display: flex;
-        align-items: center;
+    .todo-list__buttons {
+      display: flex;
+      align-items: center;
     }
 
-    .todo-list__button{
-        margin: 0.2rem;
-        font-weight: bold;
-        padding: 0.1rem;
-        padding-inline: 0.2rem;
+    .todo-list__button {
+      margin: 0.2rem;
+      font-weight: bold;
+      padding: 0.1rem;
+      padding-inline: 0.2rem;
     }
 
-    .todo-list__line{
-        height: 0.2rem;
-        background-color: black;
-        width: 60vw;
+    .todo-list__line {
+      height: 0.2rem;
+      background-color: black;
+      width: 60vw;
     }
-}
+  }
 }

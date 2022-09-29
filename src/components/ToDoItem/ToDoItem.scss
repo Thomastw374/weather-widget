@@ -1,57 +1,61 @@
-.todo{
+.todo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 16rem;
+  margin: 0.8rem;
+  .todo__task-text {
+    word-wrap: break-word;
+    width: 7rem;
+    &--strikethrough {
+      text-decoration: line-through;
+    }
+  }
+
+  .todo__checkbox {
+    position: absolute;
+    right: 70%;
+  }
+  .todo__check-task {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    width: 16rem;
-    margin: 0.8rem;
-    .todo__task-text{
-        word-wrap: break-word;
-        width: 7rem;
-        &--strikethrough{
-            text-decoration: line-through;
-        }
-    }
+  }
 
-    .todo__checkbox{
-        position: absolute;
-        right: 70%;
+  .todo__remove-button {
+    position: absolute;
+    left: 70%;
+    margin: 0.1rem;
+    border: black 2px solid;
+    padding: 0.1rem;
+    padding-inline: 0.2rem;
+    background-color: white;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
     }
-    .todo__check-task{
-        display: flex;
-        align-items: center;
-    }
-
-    .todo__remove-button{
-        position :absolute;
-        left: 70%;
-        margin: 0.2rem;
-        font-weight: bold;
-        padding: 0.1rem;
-        padding-inline: 0.3rem;
-    }
+  }
 }
 
-
 @media screen and (min-width: 768px) {
-  .todo{
-    .todo__task-text{
-        width: 20rem;
+  .todo {
+    .todo__task-text {
+      width: 20rem;
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .todo{
-    .todo__task-text{
-        width: 23rem;
+  .todo {
+    .todo__task-text {
+      width: 23rem;
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .todo{
-    .todo__task-text{
-        width: 30rem;
+  .todo {
+    .todo__task-text {
+      width: 30rem;
     }
   }
 }
