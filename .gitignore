@@ -15,7 +15,6 @@
 /build
 
 # misc
-/data/environmentVariables.js
 .DS_Store
 .env.local
 .env.development.local

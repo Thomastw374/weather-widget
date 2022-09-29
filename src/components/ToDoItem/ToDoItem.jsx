@@ -10,8 +10,10 @@ const ToDoListItem = ({task, index, removeCard}) => {
 
     return (
       <div className="todo">
-        <input onClick={handleTaskCheck} className="todo__checkbox" type="checkbox" />
-        <p className={`todo__task-text todo__task-text${isCompletedTask ? "--strikethrough" : ""}`}>{task}</p>
+        <div className="todo__check-task">
+          <input onClick={handleTaskCheck} className="todo__checkbox" type="checkbox" />
+          <p className={`todo__task-text todo__task-text${isCompletedTask ? "--strikethrough" : ""}`}>{task}</p>
+        </div>
         <button
           className="todo__remove-button"
           onClick={() => removeCard(index)}
