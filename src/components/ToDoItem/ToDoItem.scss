@@ -3,16 +3,19 @@
     justify-content: space-evenly;
     align-items: center;
     width: 16rem;
-    margin: 0.2rem;
+    margin: 0.8rem;
     .todo__task-text{
         margin-inline: 1rem;
+        width: 100%;
         &--strikethrough{
             text-decoration: line-through;
         }
     }
 
     .todo__remove-button{
-        height: 1.1rem;
-        width: 1.1rem;
+        margin: 0.2rem;
+        font-weight: bold;
+        padding: 0.1rem;
+        padding-inline: 0.3rem;
     }
 }

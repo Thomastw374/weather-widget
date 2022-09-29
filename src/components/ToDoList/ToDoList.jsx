@@ -8,6 +8,7 @@ const ToDoList = () => {
 
     const addToDo = () => {
         setToDoList(oldArray => [...oldArray, toDo])
+        setToDo("")
     }
 
     const removeCard = (index) => {
@@ -34,20 +35,23 @@ const ToDoList = () => {
 
     return (
       <div className="todo-list">
-        <div className="todo-list__inputs">
-          <div className="todo-list__text-input">
-            <p>Task: </p>
-            <input className="todo-list__input" type="text" onChange={handleInput} />
+          <div className="todo-list__inputs">
+            <div className="todo-list__text-input">
+              <p>Task: </p>
+              <input className="todo-list__input" 
+              value = {toDo}
+              type="text" onChange={handleInput}
+              />
+            </div>
+            <div className="todo-list__buttons">
+              <button className="todo-list__button" onClick={addToDo}>
+                +
+              </button>
+              <button className="todo-list__button" onClick={resetToDos}>
+                Reset
+              </button>
+            </div>
           </div>
-          <div className="todo-list__buttons">
-            <button className="todo-list__button" onClick={addToDo}>
-              +
-            </button>
-            <button className="todo-list__button" onClick={resetToDos}>
-              Reset
-            </button>
-          </div>
-        </div>
         <div className="todo-list__line"></div>
         <div className="todo-list__items">{toDoListArr}</div>
       </div>

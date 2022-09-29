@@ -5,9 +5,9 @@ const WeekForecast = ({forecast}) => {
 
     const arrayOfDailys = forecast.forecast.forecastday;
 
-    const dailyForecastArray = arrayOfDailys.map((dailyForecast) => {
+    const dailyForecastArray = arrayOfDailys.map((dailyForecast, index) => {
         return(
-            <DailyForecast dailyForecast={dailyForecast}/>
+            <DailyForecast key={index} dailyForecast={dailyForecast}/>
         )
     })
 

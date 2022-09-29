@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 31rem;
+  width: 15rem;
   margin: 1rem;
   min-width: 15rem;
 
@@ -13,16 +14,16 @@
   }
 
   .carousel__arrow-left {
-    position: relative;
-    left: 0.7rem;
+    position: absolute;
+    left: 1.2rem;
     &:hover {
       cursor: pointer;
     }
   }
 
   .carousel__arrow-right {
-    position: relative;
-    right: 0.7rem;
+    position: absolute;
+    right: 1.2rem;
     &:hover {
       cursor: pointer;
     }
@@ -56,6 +57,22 @@
     .carousel__header {
       min-width: 40rem;
     }
+
+    .carousel__arrow-left {
+    position: absolute;
+    left: 5.2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .carousel__arrow-right {
+    position: absolute;
+    right: 5.2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   }
 }
 
@@ -65,10 +82,28 @@
       height: 16rem;
     }
   }
+
+  .carousel__arrow-left {
+    position: absolute;
+    left: 7.2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .carousel__arrow-right {
+    position: absolute;
+    right: 7.2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .carousel {
+    width: 100vw;
+    height: 32rem;
     .carousel__image {
       height: 19rem;
     }
