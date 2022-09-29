@@ -11,13 +11,13 @@ function App() {
   const [newsData, setNewsData] = useState(mockNewsData)
   const [forecast, setForecast] = useState(mockForecast)
 
+  //To be removed.
+
   const getPositionPromise = function (options) {
     return new Promise(function (resolve, reject) {
       navigator.geolocation.getCurrentPosition(resolve, reject)
     });
   }
-
-  // Do I even need the promise here now?
   
   const getPosition = () => {
     if (navigator.geolocation) {
@@ -45,7 +45,6 @@ function App() {
     setWeather(weatherData)
 
     let forecastData = {}
-    console.log(process.env.REACT_APP_WEATHER_API_KEY)
 
     const forecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${lat},${long}&days=8`;
 

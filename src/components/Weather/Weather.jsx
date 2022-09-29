@@ -7,7 +7,7 @@ const Weather = ({weather}) => {
     
     const location = weather.location;
     const current = weather.current;
-// may be able to remove some this ternary logic now. weather is now initialized as an empty object, I think that was the issue.
+
     return (
       <div className="weather-card">
         <div className="weather-card__topline">
